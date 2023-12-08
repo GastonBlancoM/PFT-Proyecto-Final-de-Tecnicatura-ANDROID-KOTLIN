@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.login.home.MainActivity"
+    android:background="#202732">
+
+   <androidx.fragment.app.FragmentContainerView
+       android:id="@+id/contenedor"
+       android:name="androidx.navigation.fragment.NavHostFragment"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       app:defaultNavHost = "true"
+       app:navGraph = "@navigation/nav_graph"/>
+
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/bottomNavView"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="#343A3E"
+       app:elevation="3dp"
+       app:itemIconTint="@color/bottom_nav_selector"
+       app:itemTextColor="@color/bottom_nav_selector"
+       app:itemActiveIndicatorStyle="@null"
+       app:itemPaddingBottom="20dp"
+       app:itemPaddingTop="12dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:menu="@menu/navigation_menu"
+       tools:layout_editor_absoluteX="0dp"
+       tools:ignore="VisualLintBottomNav" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

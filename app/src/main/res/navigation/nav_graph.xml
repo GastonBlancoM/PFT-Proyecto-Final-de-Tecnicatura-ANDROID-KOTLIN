@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_Login">
+
+    <fragment
+        android:id="@+id/fragment_Login"
+        android:name="com.example.grupo_7.proyectoft_mobile.ui.login.Fragment_Login"
+        android:label="fragment__login"
+        tools:layout="@layout/fragment__login" >
+        <action
+            android:id="@+id/action_fragment_Login_to_fragment_Home2"
+            app:destination="@id/fragment_Home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Reclamos2"
+        android:name="com.example.grupo_7.proyectoft_mobile.ui.menues.Fragment_Reclamos"
+        android:label="fragment__reclamos"
+        tools:layout="@layout/fragment__reclamos" >
+        <action
+            android:id="@+id/action_fragment_Reclamos2_to_fragment_listaReclamos"
+            app:destination="@id/fragment_listaReclamos" />
+        <action
+            android:id="@+id/action_fragment_Reclamos2_to_fragment_crearReclamo"
+            app:destination="@id/fragment_crearReclamo" />
+        <action
+            android:id="@+id/action_fragment_Reclamos2_to_fragment_editarReclamo"
+            app:destination="@id/fragment_editarReclamo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Home2"
+        android:name="com.example.grupo_7.proyectoft_mobile.ui.menues.Fragment_Home"
+        android:label="fragment__home"
+        tools:layout="@layout/fragment__home" />
+    <fragment
+        android:id="@+id/fragment_crearReclamo"
+        android:name="com.example.grupo_7.proyectoft_mobile.ui.menues.reclamos.Fragment_crearReclamo"
+        android:label="fragment_crear_reclamo"
+        tools:layout="@layout/fragment_crear_reclamo" >
+        <action
+            android:id="@+id/action_fragment_crearReclamo_to_fragment_Reclamos2"
+            app:destination="@id/fragment_Reclamos2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_editarReclamo"
+        android:name="com.example.grupo_7.proyectoft_mobile.ui.menues.reclamos.Fragment_editarReclamo"
+        android:label="fragment_editar_reclamo"
+        tools:layout="@layout/fragment_editar_reclamo" >
+        <action
+            android:id="@+id/action_fragment_editarReclamo_to_fragment_Reclamos2"
+            app:destination="@id/fragment_Reclamos2" />
+        <action
+            android:id="@+id/action_fragment_editarReclamo_to_fragment_listaReclamos"
+            app:destination="@id/fragment_listaReclamos" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_listaReclamos"
+        android:name="com.example.grupo_7.proyectoft_mobile.ui.menues.reclamos.Fragment_listaReclamos"
+        android:label="fragment_lista_reclamos"
+        tools:layout="@layout/fragment_lista_reclamos" >
+        <action
+            android:id="@+id/action_fragment_listaReclamos_to_fragment_Reclamos2"
+            app:destination="@id/fragment_Reclamos2" />
+        <action
+            android:id="@+id/action_fragment_listaReclamos_to_fragment_editarReclamo"
+            app:destination="@id/fragment_editarReclamo" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Options"
+        android:name="com.example.grupo_7.proyectoft_mobile.ui.menues.Fragment_Options"
+        android:label="fragment__options"
+        tools:layout="@layout/fragment__options" >
+        <action
+            android:id="@+id/action_fragment_Options_to_fragment_Login"
+            app:destination="@id/fragment_Login" />
+    </fragment>
+</navigation>
